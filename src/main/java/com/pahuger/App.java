@@ -101,7 +101,7 @@ public class App extends Application {
 
     private void addFinancialRecord(String description, double amount) {
         try (Connection conn = DriverManager.getConnection(DB_URL);
-             PreparedStatement pstmt = conn.prepareStatement("INSERT INTO financial_records(description, amount) VALUES(?, ?)", Statement.RETURN_GENERATED_KEYS)) {
+             PreparedStatement pstmt = conn.prepareStatement("INSERT INTO financial_records(description, amount) VALUES(?, ?)")) {
             pstmt.setString(1, description);
             pstmt.setDouble(2, amount);
             int affectedRows = pstmt.executeUpdate();
