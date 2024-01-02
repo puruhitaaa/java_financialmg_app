@@ -87,6 +87,7 @@ public class FinancialManager {
             pstmt.setDouble(2, newAmount);
             pstmt.setInt(3, id);
             pstmt.executeUpdate();
+            setBalance();
             System.out.println("Updated a transaction with id: " + id);
         } catch (SQLException e) {
             System.out.println(e.getMessage());

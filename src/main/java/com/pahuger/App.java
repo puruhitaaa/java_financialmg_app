@@ -41,7 +41,7 @@ public class App {
                 case 4:
                     System.out.print("Enter transaction id: ");
                     int id = scanner.nextInt();
-                    scanner.nextLine();
+                    // scanner.nextLine();
                     System.out.print("Enter new transaction type (Income/Expense): ");
                     scanner.nextLine();
                     String newType = scanner.nextLine();
